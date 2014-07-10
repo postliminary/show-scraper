@@ -9,6 +9,7 @@ import scrapy
 
 
 class Show(scrapy.Item):
+    id = scrapy.Field()
     title = scrapy.Field()
     desc = scrapy.Field()
     airday = scrapy.Field()

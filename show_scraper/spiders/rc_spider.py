@@ -25,6 +25,7 @@ class RcSpider(scrapy.Spider):
         
         for show in shows:
             l = ShowLoader(Show(), show)
+            l.add_xpath("id", self.titleXpath)
             l.add_xpath("title", self.titleXpath)
             l.add_xpath("desc", self.descXpath)
             l.add_xpath("airday", self.airdayXpath)
